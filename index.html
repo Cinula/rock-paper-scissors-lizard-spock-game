@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Rock, Paper, Scisors, Lizard, Spock Game</title>
+</head>
+
+<body>
+    <h1>Rock - Paper - Scissors - Lizard - Spock</h1>
+    <!-- Buttons to choose for user -->
+    <div id="choice">
+        <button onclick="game('Rock')"><img src="assets/images/rock.png"></button>
+        <button onclick="game('Paper')"><img src="assets/images/paper.png"></button>
+        <button onclick="game('Scissors')"><img src="assets/images/scissors.png"></button>
+        <button onclick="game('Lizard')"><img src="assets/images/lizard.png"></button>
+        <button onclick="game('Spock')"><img src="assets/images/spock.png"></button>
+    </div>
+    <!-- Showing what was choosen by player and computer -->
+    <div id="player">Player choice:</div>
+    <div id="com">Computer choice:</div>
+    <!-- showing result -->
+    <div id="results"></div>
+    <!-- showing scores for player and computer -->
+    <div id="pScores">Player Score: <span id="playerScore">0 </span></div>
+    <div id="cScores">Computer Score: <span id="computerScore"> 0 </span></div>
+
+    <script src="assets/script.js"></script>
+</body>
