@@ -4,36 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Rock, Paper, Scisors, Lizard, Spock Game"
-        content="Game of chance that expands the traditional game of Rock, Paper, Scissors.">
     <link rel="stylesheet" href="assets/style.css">
-    <title>Rock, Paper, Scisors, Lizard, Spock Game</title>
+    <title>Rock, Paper, Scissors, Lizard, Spock Game </title>
 </head>
 
 <body>
     <header>
-        <h1>Rock - Paper - Scissors - Lizard - Spock</h1>
+        <h1>Rock, Paper, Scissors, Lizard, Spock Game</h1>
     </header>
-    <!-- Buttons to choose for user -->
-    <div id="choice">
-        <button onclick="game('Rock')" aria-label="Rock"><img src="assets/images/rock.webp"
-                alt="Fist imitatinf Rock image"></button>
-        <button onclick="game('Paper')" aria-label="Paper"><img src="assets/images/paper.webp"
-                alt="open hand  imitating paper"></button>
-        <button onclick="game('Scissors')" aria-label="Scissors"><img src="assets/images/scissors.webp"
-                alt="fingers imitating scissors"></button>
-        <button onclick="game('Lizard')" aria-label="Lizard"><img src="assets/images/lizard.webp"
-                alt="lizard image"></button>
-        <button onclick="game('Spock')" aria-label="Spock"><img src="assets/images/spock.webp"
-                alt="hand from startrek"></button>
+
+    <div class="scores">
+        <div id="user-label" class="badge">User</div>
+        <div id="computer-label" class="badge">Comp</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
     </div>
-    <!-- Showing what was choosen by player and computer -->
-    <div id="player">Player:</div>
-    <div id="com">Computer:</div>
-    <!-- showing result -->
-    <div id="results"></div>
-    <!-- showing scores for player and computer -->
-    <div id="pScores">Player Score: <span id="playerScore">0 </span></div>
-    <div id="cScores">Computer Score: <span id="computerScore"> 0 </span></div>
+    <div class="result">
+        <p>Paper covers rock. You Win!</p>
+    </div>
+    <div class="choices">
+        <div class="choice" id="r">
+            <img src="assets/images/rock.webp" alt="rock-image">
+        </div>
+        <div class="choice" id="c">
+            <img src="assets/images/scissors.webp" alt="scissors-image">
+        </div>
+        <div class="choice" id="p">
+            <img src="assets/images/paper.webp" alt="paper-image">
+        </div>
+        <div class="choice" id="l">
+            <img src="assets/images/lizard.webp" alt="lizard-image">
+        </div>
+        <div class="choice" id="s">
+            <img src="assets/images/spock.webp" alt="spock-image">
+        </div>
+
+    </div>
+    <p id="action-message">Good luck!</p>
     <script src="assets/script.js"></script>
 </body>
+
+</html>

@@ -1,66 +1,98 @@
-const choice = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-const playerView = document.getElementById("player");
-const comView = document.getElementById("com");
-const resultsView = document.getElementById("results");
-const playerScoreView = document.getElementById('playerScore');
-const computerScoreView = document.getElementById('computerScore');
-let playerScore = 0;
-let computerScore = 0;
-/**
- * Game function for computer to pick random number from choice list
- * for player choic
- * compering player choice and computer choise
- */
-function game(playerChoice) {
-    const computerChoice = choice[Math.floor(Math.random() * 5)];
-    let results = "";
+let userScore = 0;
+let compScore = 0;
+const userScore_span = document.getElementById("user-score");
+const compScore_span = document.getElementById("computer-score");
+const scoreBoard_div = document.querySelector(".scores");
+const result_p = document.querySelector(".result > p");
+const rock_div = document.getElementById("r");
+const paper_div = document.getElementById("p");
+const scissores_div = document.getElementById("c");
+const lizard_div = document.getElementById("l");
+const spock_div = document.getElementById("s");
 
-    if (playerChoice === computerChoice) {
-        results = "It's a Draw!";
-    } else {
-        switch (playerChoice) {
-            case "Rock":
-                results = (computerChoice === "Scissors") ? "You Win!" : "You Lose!";
-                results = (computerChoice === "Lizard") ? "You Win!" : "You Lose!";
-                break;
-            case "Paper":
-                results = (computerChoice === "Rock") ? "You Win!" : "You Lose!";
-                results = (computerChoice === "Spock") ? "You Win!" : "You Lose!";
-                break;
-            case "Scissors":
-                results = (computerChoice === "Paper") ? "You Win!" : "You Lose!";
-                results = (computerChoice === "Lizard") ? "You Win!" : "You Lose!";
-                break;
-            case "Lizard":
-                results = (computerChoice === "Paper") ? "You Win!" : "You Lose!";
-                results = (computerChoice === "Spock") ? "You Win!" : "You Lose!";
-                break;
-            case "Spock":
-                results = (computerChoice === "Scissors") ? "You Win!" : "You Lose!";
-                results = (computerChoice === "Rock") ? "You Win!" : "You Lose!";
-                break;
-        }
-    }
-    /**
-     * Displaying Player choise and computer random choice on website 
-     * Displaying score board for player and computer of winnings
-     */
-    playerView.textContent = `Player: ${playerChoice}`;
-    comView.textContent = `Computer: ${computerChoice}`;
-    resultsView.textContent = results;
+function getComputerChoice() {
+    const choices = ['r', 'p', 'ss', 'l', 's'];
+    const randomNumber = Math.floor(Math.random() * 5);
+    return choices[randomNumber];
+}
+function coverToWorld(letter) {
+    if (letter === "r") return "Rock";
+    if (letter === "p") return "Paper";
+    if (letter === "c") return "Scissores";
+    if (letter === "l") return "Lizard";
+    if (letter === "s") return "Spock";
+}
 
-    resultsView.classList.remove("greenText", "redText");
+function win(userChoice, computerChoice) {
+    userScore++;
+    userScore_span.innerHTML = userScore;
+    compScore_span.innerHTML = compScore;
+    result_p.innerHTML = `${coverToWorld(userChoice)} beats ${coverToWorld(computerChoice)} You win!!!`;
+}
+function lose(userChoice, computerChoice) {
+    compScore++;
+    userScore_span.innerHTML = userScore;
+    compScore_span.innerHTML = compScore;
+    result_p.innerHTML = `${coverToWorld(userChoice)} Loses to ${coverToWorld(computerChoice)} You Lost!`;;
+}
+function draw(userChoice, computerChoice) {
+    result_p.innerHTML = `${coverToWorld(userChoice)} equals ${coverToWorld(computerChoice)} Its a draw!`;
+}
 
-    switch (results) {
-        case "You Win!":
-            resultsView.classList.add("greenText");
-            playerScore++;
-            playerScoreView.textContent = playerScore;
+function game(userChoice) {
+    const computerChoice = getComputerChoice();
+    switch (userChoice + computerChoice) {
+        case "rc":
+        case "rl":
+        case "ps":
+        case "pr":
+        case "cp":
+        case "cl":
+        case "ls":
+        case "lp":
+        case "sc":
+        case "sr":
+            win(userChoice, computerChoice);
             break;
-        case "You Lose!":
-            resultsView.classList.add("redText");
-            computerScore++;
-            computerScoreView.textContent = computerScore;
+        case "rp":
+        case "rs":
+        case "pc":
+        case "pl":
+        case "cr":
+        case "cs":
+        case "lr":
+        case "lc":
+        case "sp":
+        case "sl":
+            lose(userChoice, computerChoice);
+            break;
+        case "rr":
+        case "pp":
+        case "cc":
+        case "ll":
+        case "ss":
+            draw(userChoice, computerChoice);
             break;
     }
 }
+
+function main() {
+
+    rock_div.addEventListener('click', function () {
+        game("r");
+    })
+    paper_div.addEventListener('click', function () {
+        game("p");
+    })
+    scissores_div.addEventListener('click', function () {
+        game("c");
+    })
+    lizard_div.addEventListener('click', function () {
+        game("l");
+    })
+    spock_div.addEventListener('click', function () {
+        game("s");
+    })
+}
+
+main();
