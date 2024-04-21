@@ -6,7 +6,11 @@ const playerScoreView = document.getElementById('playerScore');
 const computerScoreView = document.getElementById('computerScore');
 let playerScore = 0;
 let computerScore = 0;
-
+/**
+ * Game function for computer to pick random number from choice list
+ * for player choic
+ * compering player choice and computer choise
+ */
 function game(playerChoice) {
     const computerChoice = choice[Math.floor(Math.random() * 5)];
     let results = "";
@@ -37,11 +41,15 @@ function game(playerChoice) {
                 break;
         }
     }
+    /**
+     * Displaying Player choise and computer random choice on website 
+     * Displaying score board for player and computer of winnings
+     */
     playerView.textContent = `Player: ${playerChoice}`;
     comView.textContent = `Computer: ${computerChoice}`;
     resultsView.textContent = results;
 
-    resultsDisplay.classList.remove("greenText", "redText");
+    resultsView.classList.remove("greenText", "redText");
 
     switch (results) {
         case "You Win!":
