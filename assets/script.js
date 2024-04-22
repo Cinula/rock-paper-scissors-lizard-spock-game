@@ -1,21 +1,20 @@
 let userScore = 0;
 let compScore = 0;
-const userScore_span = document.getElementById("user-score");
-const compScore_span = document.getElementById("computer-score");
-const scoreBoard_div = document.querySelector(".scores");
-const result_p = document.querySelector(".result > p");
-const rock_div = document.getElementById("r");
-const paper_div = document.getElementById("p");
-const scissores_div = document.getElementById("c");
-const lizard_div = document.getElementById("l");
-const spock_div = document.getElementById("s");
+const userScoreSpan = document.getElementById("user-score");
+const compScoreSpan = document.getElementById("computer-score");
+const resultP = document.querySelector(".result > p");
+const rockDiv = document.getElementById("r");
+const paperDiv = document.getElementById("p");
+const scissoresDiv = document.getElementById("c");
+const lizardDiv = document.getElementById("l");
+const spockDiv = document.getElementById("s");
 
 function getComputerChoice() {
-    const choices = ['r', 'p', 'ss', 'l', 's'];
+    const choices = ['r', 'p', 'c', 'l', 's'];
     const randomNumber = Math.floor(Math.random() * 5);
     return choices[randomNumber];
 }
-function coverToWorld(letter) {
+function coverLetter(letter) {
     if (letter === "r") return "Rock";
     if (letter === "p") return "Paper";
     if (letter === "c") return "Scissores";
@@ -25,18 +24,18 @@ function coverToWorld(letter) {
 
 function win(userChoice, computerChoice) {
     userScore++;
-    userScore_span.innerHTML = userScore;
-    compScore_span.innerHTML = compScore;
-    result_p.innerHTML = `${coverToWorld(userChoice)} beats ${coverToWorld(computerChoice)} You win!!!`;
+    userScoreSpan.innerHTML = userScore;
+    compScoreSpan.innerHTML = compScore;
+    resultP.innerHTML = `${coverLetter(userChoice)} beats ${coverLetter(computerChoice)} You WON!!!`;
 }
 function lose(userChoice, computerChoice) {
     compScore++;
-    userScore_span.innerHTML = userScore;
-    compScore_span.innerHTML = compScore;
-    result_p.innerHTML = `${coverToWorld(userChoice)} Loses to ${coverToWorld(computerChoice)} You Lost!`;;
+    userScoreSpan.innerHTML = userScore;
+    compScoreSpan.innerHTML = compScore;
+    resultP.innerHTML = `${coverLetter(userChoice)} loses to ${coverLetter(computerChoice)} You LOST!`;;
 }
 function draw(userChoice, computerChoice) {
-    result_p.innerHTML = `${coverToWorld(userChoice)} equals ${coverToWorld(computerChoice)} Its a draw!`;
+    resultP.innerHTML = `${coverLetter(userChoice)} Equals ${coverLetter(computerChoice)} Its a draw!`;
 }
 
 function game(userChoice) {
@@ -78,19 +77,19 @@ function game(userChoice) {
 
 function main() {
 
-    rock_div.addEventListener('click', function () {
+    rockDiv.addEventListener('click', function () {
         game("r");
     })
-    paper_div.addEventListener('click', function () {
+    paperDiv.addEventListener('click', function () {
         game("p");
     })
-    scissores_div.addEventListener('click', function () {
+    scissoresDiv.addEventListener('click', function () {
         game("c");
     })
-    lizard_div.addEventListener('click', function () {
+    lizardDiv.addEventListener('click', function () {
         game("l");
     })
-    spock_div.addEventListener('click', function () {
+    spockDiv.addEventListener('click', function () {
         game("s");
     })
 }
