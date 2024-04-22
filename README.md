@@ -17,11 +17,11 @@ Hello and welcome, in this project you can see basic information about the rock,
 
 
 # Features of the game The game have a 5 navigating options to choose from:
-    * Option one is an image of the fist as a rock in the game.
-    * Option two is an image of two fingers as scissors in the game.
-    * Option three is an image of an open hand as a paper in the game.
-    * Option four is an image of a lizard drawing as a lizard in a game.
-    * Option five is an image of Spock's character from startrek.
+* Option one is an image of the fist as a rock in the game.
+* Option two is an image of two fingers as scissors in the game.
+* Option three is an image of an open hand as a paper in the game.
+* Option four is an image of a lizard drawn as a lizard in a game.
+* Option five is an image of Spock's character from startrek.
 * Each option has a white background, when the user points their cursor at it color changes to violet.
 * Each option is clickable, and after clicking the game approves the selection. 
 * Each time the user selects one of the options there is a score increase. 
