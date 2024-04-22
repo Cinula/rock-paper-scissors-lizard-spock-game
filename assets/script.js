@@ -93,5 +93,6 @@ function main() {
         game("s");
     })
 }
-
-main();
+document.addEventListener("DOMContentLoaded", (event) => {
+    main()
+});

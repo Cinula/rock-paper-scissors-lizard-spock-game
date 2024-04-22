@@ -21,7 +21,7 @@ Hello and welcome, in this project you can see basic information about the rock,
     * Option two is an image of two fingers as scissors in the game.
     * Option three is an image of an open hand as a paper in the game.
     * Option four is an image of a lizard drawing as a lizard in a game.
-    * Option five is an image of Spock character from startrek.
+    * Option five is an image of Spock's character from startrek.
 * Each option has a white background, when the user points their cursor at it color changes to violet.
 * Each option is clickable, and after clicking the game approves the selection. 
 * Each time the user selects one of the options there is a score increase. 
@@ -34,7 +34,7 @@ Hello and welcome, in this project you can see basic information about the rock,
 
 I use the colors white, black and violet. I believe is good contrast and readable for users.
 I use font built-in VCS - "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" 
-I use font Siza to be easily readable for user. 
+I use font Siza to be easily readable for the user. 
 
 
 # technology 
@@ -82,25 +82,19 @@ I use font Siza to be easily readable for user.
             * Scissors are picked for the user when you point it cursor at them the background color changes to violet.
             * After the user clicks it automatically computer makes his random choice. 
         * Test for "Paper" choice for user
-            * When Paper is picked for the user when you point it cursor at it the background color changes for violet.
-            * After user click is automatickly computer make his ranodm choice. 
+            * When Paper is picked for the user when you point the cursor at it the background color changes to violet.
+            * After the user clicks the computer makes his random choice. 
         * Test for "Lizard" choice for user
-            <img>
-            * Lizard is pick for user when you point it cursor on it the backgraound color changes for violet.
-            * After user click is automatickly computer make his ranodm choice.
+            * Lizard is picked for the user when you point it cursor at it the background color changes to violet.
+            * After the user clicks it automatically computer makes his random choice.
         * Test for "Spock" choice for user
+            * Spock is picked for the user when you point it cursor at it the background color changes to violet.
+            * After the user clicks it automatically computer makes his random choice.
+        * Test for score board for user:
+        * The score goes up by one every time the user wins
+        * The score for the computer goes up by one every time wins. 
             <img>
-            * Spock is pick for user when you point it cursor on it the backgraound color changes for violet.
-            * After user click is automatickly computer make his ranodm choice.
-        * Test for score boadr for user:
-            <img>
-            * Score going up every time user wins
-        * Test for score board for computer 
-            <img>
-            * Score going up every time computer wins
-        Text for information who wins works correct
-            <img>
-            * text changes to beats, lose and equal. 
+        * text changes to beats, lose and equal. 
             <img>
             <img>
             <img>
@@ -108,15 +102,15 @@ I use font Siza to be easily readable for user.
 
 # Bugs and errors 
 
-    * typing mistakes 
-    * semi-colon missing 
-    * colon missing 
-    * brackets missing
+ * typing mistakes 
+ * semi-colon missing  
+ * colon missing 
+ * brackets missing
 
-        * to fix it I had to review the code find all the missing attributes and place it in the right order.  
+    * to fix it I had to review the code find all the missing attributes and place it in the right order.  
 
-* Type of file jpeg or png , images were file was convert to WebP for quicker load on page.
-    * To fix it had to use a tool to convert images from png to WebP.
+* Type of file jpeg or png, images were file was converted to WebP for the quicker load on the page.
+    * To fix it had to use a tool to convert images from PNG to WebP.
 
 
 # Deployment
@@ -133,9 +127,9 @@ The live link can be found here <link>
 # Credits
 
 * Content
-    * The information for the game rock, paper, scissors, lizard, spock game was takien from Code institute from idea example 1.
+    * The information for the game Rock, paper, scissors, lizard, Spock game was taken from Code Institute from idea example 1.
     * Code institute and love Math projects helped me a lot in understanding a lot of content. 
-    * I gathered information for a better understanding of the game engine and how create JavaScript on YouTube the links are below: 
+    * I gathered information for a better understanding of the game engine and how to create JavaScript on YouTube the links are below: 
         [link]
         [link]
 * Media
