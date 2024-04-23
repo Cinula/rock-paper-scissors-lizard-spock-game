@@ -1,7 +1,7 @@
 let userScore = 0;
 let compScore = 0;
-let userScoreSpan = document.getElementById("user-score");
-let compScoreSpan = document.getElementById("computer-score");
+let user_score_span = document.getElementById("user-score");
+let comp_score_span = document.getElementById("computer-score");
 let resultP = document.querySelector(".result > p");
 let rockDiv = document.getElementById("r");
 let paperDiv = document.getElementById("p");
@@ -40,8 +40,8 @@ function coverLetter(letter) {
 
 function win(userChoice, computerChoice) {
     userScore++;
-    userScoreSpan.innerHTML = userScore;
-    compScoreSpan.innerHTML = compScore;
+    user_score_span.innerHTML = userScore;
+    comp_score_span.innerHTML = compScore;
     resultP.innerHTML = `${coverLetter(userChoice)} beats ${coverLetter(computerChoice)} You WON!!!`;
 }
 /**
@@ -50,8 +50,8 @@ function win(userChoice, computerChoice) {
  */
 function lose(userChoice, computerChoice) {
     compScore++;
-    userScoreSpan.innerHTML = userScore;
-    compScoreSpan.innerHTML = compScore;
+    user_score_span.innerHTML = userScore;
+    comp_score_span.innerHTML = compScore;
     resultP.innerHTML = `${coverLetter(userChoice)} loses to ${coverLetter(computerChoice)} You LOST!`;;
 }
 /**
@@ -104,7 +104,7 @@ function game(userChoice) {
     }
 }
 /**
- * Function main is for game 
+ * Function main is for to run game 
  */
 function main() {
 

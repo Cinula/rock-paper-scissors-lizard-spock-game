@@ -20,6 +20,10 @@ header h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.icon {
+    display: none;
+}
+
 div>p {
     color: violet;
 }
@@ -80,7 +84,7 @@ div>p {
     background-color: white;
     margin: 5px;
     padding: 2px;
-    transition: all 1.5s ease;
+    transition: all 0.5s ease;
 }
 
 .choice:hover {
@@ -95,4 +99,26 @@ div>p {
     font-size: 40px;
     font-weight: bold;
     margin-top: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+    header {
+        padding: 5px;
+    }
+
+    header h1 {
+        display: none;
+    }
+
+    .icon {
+        display: flex;
+        justify-content: space-between;
+        font-size: 30px;
+    }
+
+    img {
+        max-width: 120px;
+        max-height: 120px;
+    }
+
 }
