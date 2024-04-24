@@ -117,8 +117,8 @@ div>p {
     }
 
     img {
-        max-width: 120px;
-        max-height: 120px;
+        height: 120px;
+        width: 120px;
     }
 
 }

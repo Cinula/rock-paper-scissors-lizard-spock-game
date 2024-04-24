@@ -1,9 +1,8 @@
-# rock-paper-scissors-lizard-spock-game
-# Rock, paper, scissors, game Project
+# Rock, paper, scissors, lizard, Spock game Project
 
 Hello and welcome, in this project you can see basic information about the rock, scissors, paper, lizard, and Spock game. 
 
-# user story 
+# User story 
 
 * As a visiting user, I would like to:
     * Play the rock, scissors, paper, lizard, Spock game.
@@ -14,7 +13,7 @@ Hello and welcome, in this project you can see basic information about the rock,
     * See the score increasing when I win.
     * See the score increasing for the computer if I lose.
     * See and navigate through the game.
-
+    ![main website](<assets/images/rock, paper, scisors,lizard, spock.png>)
 
 # Features of the game The game have a 5 navigating options to choose from:
 * Option one is an image of the fist as a rock in the game.
@@ -26,9 +25,10 @@ Hello and welcome, in this project you can see basic information about the rock,
 * Each option is clickable, and after clicking the game approves the selection. 
 * Each time the user selects one of the options there is a score increase. 
 * Each time the user wins or loses the information is displayed in violet color under the scoreboard when the user wins or loses.
+![option to chose](<assets/images/rock, paper, scisors,lizard, spock.png>)
 
 # Future features 
-* 
+* The game could store the date time and score for a user to keep records of winning and what day the user spent most time playing the game.
 
 # Typography and color scheme 
 
@@ -37,9 +37,10 @@ I use font built-in VCS - "Cambria, Cochin, Georgia, Times, 'Times New Roman', s
 I use font Siza to be easily readable for the user. 
 
 
-# technology 
+# Technology 
 
 * Main technology 
+* Tower PC with Windows 10 Pro
     * Visual studio code
         * HTML language to write code
         * CSS to style the website
@@ -56,48 +57,56 @@ I use font Siza to be easily readable for the user.
 
 
 
-# testing 
+# Testing 
 
 * Tested in HTML code validator [link to HTML validator](https://validator.w3.org/)
-    <img>
+    
 * Tested CSS code validator [link to CSS validator](https://jigsaw.w3.org/css-validator/)
-    <img>
+    
 
 * Lighthouse test by Google inspects tool. 
     <img>
+    <img>
  * The browser test is complete works correctly and displaying on Chrome and Microsoft Edge browsers.
-   <img>
-   <img>
+ * Microsoft browser Test: 
+ ![Microsoft Edge](<assets/images/microsoft edge.png>)
+ * Google Chrome browser Test:
+ ![Google Chrome](<assets/images/Google Chrome.png>)
 
 * Test for user choices in-game:
     * There are 5 options to choose after the user's choice he should find out if he won, lost or drew with an opponent.
     * The test will also show the ability of random choice of the computer.
-    * The first test is to check random choice for the computer    
-        * Test for "Rock" choice for user 
-            <img>
-        * Rock is picked for the user when you point it cursor at it the background color changes to violet.
-        * After the user clicks it automatically computer makes his random choice. 
-        * Test for "Scissors" choice for user
-            <img>
-            * Scissors are picked for the user when you point it cursor at them the background color changes to violet.
-            * After the user clicks it automatically computer makes his random choice. 
-        * Test for "Paper" choice for user
-            * When Paper is picked for the user when you point the cursor at it the background color changes to violet.
-            * After the user clicks the computer makes his random choice. 
-        * Test for "Lizard" choice for user
-            * Lizard is picked for the user when you point it cursor at it the background color changes to violet.
-            * After the user clicks it automatically computer makes his random choice.
-        * Test for "Spock" choice for user
-            * Spock is picked for the user when you point it cursor at it the background color changes to violet.
-            * After the user clicks it automatically computer makes his random choice.
-        * Test for score board for user:
-        * The score goes up by one every time the user wins
-        * The score for the computer goes up by one every time wins. 
-            <img>
-        * text changes to beats, lose and equal. 
-            <img>
-            <img>
-            <img>
+    * The first test is to check random choice for the computer
+
+    * Test for "Rock" choice for user 
+        ![Test Rock](<Test Rock-1.png>)
+    * Rock is picked for the user when you point it cursor at it the background color changes to violet.
+    * After the user clicks it automatically computer makes a random choice. 
+    * Test for "Scissors" choice for user
+        ![Test Scissors](<assets/images/Test Scissors.png>)
+    * Scissors are picked for the user when you point it cursor at them the background color changes to violet.
+    * After the user clicks it automatically computer makes a random choice. 
+    * Test for "Paper" choice for user
+        ![Test Paper](<assets/images/Test Paper.png>)
+    * When Paper is picked for the user when you point the cursor at it the background color changes to violet.
+    * After the user clicks the computer makes his random choice. 
+    * Test for "Lizard" choice for user
+    * Lizard is picked for the user when you point it cursor at it the background color changes to violet.
+        ![Test Lizard](<assets/images/Test Lizard.png>)
+    * After the user clicks it automatically computer makes a random choice.
+    * Test for "Spock" choice for user
+        ![Test Spock](<assets/images/Test Spock.png>)
+    * Spock is picked for the user when you point it cursor at it the background color changes to violet.
+    * After the user clicks it automatically computer makes a random choice.
+    * Test for scoreboard for user:
+    * The score goes up by one every time the user wins
+        ![Score up](<assets/images/Score up for user.png>)
+    * The score for the computer goes up by one every time wins. 
+        ![Rock loses](<assets/images/Rock loses.png>)
+    * text changes to beats, lose and equal. 
+        ![Rock wins](<assets/images/Score up for user.png>)
+        ![Rock loses](<assets/images/Rock loses.png>)
+        ![Rock equal](<assets/images/Rock equal.png>)
 
 
 # Bugs and errors 
@@ -122,7 +131,7 @@ Click on setting ( last section on navbar)
     * left-hand side of the drop-down many find Build and Deployment
     * choose to deploy from a branch below choose the main branches and root folder 
         * save
-The live link can be found here <link>
+The live link can be found here [link to game](https://cinula.github.io/rock-paper-scissors-lizard-spock-game/)
 
 # Credits
 
@@ -130,8 +139,8 @@ The live link can be found here <link>
     * The information for the game Rock, paper, scissors, lizard, Spock game was taken from Code Institute from idea example 1.
     * Code institute and love Math projects helped me a lot in understanding a lot of content. 
     * I gathered information for a better understanding of the game engine and how to create JavaScript on YouTube the links are below: 
-        [link]
-        [link]
+        [link for Youtube](https://www.youtube.com/watch?v=jaVNP3nIAv0&t=2160s)
+        [link for Youtube](https://www.youtube.com/watch?v=3uKdQx-SZ5A&t=560s)
 * Media
     * The images were gathered from an open-source site.
 
