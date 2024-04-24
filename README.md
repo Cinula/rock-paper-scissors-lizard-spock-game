@@ -124,14 +124,22 @@ I use font Siza to be easily readable for the user.
 
 # Deployment
 
-This website was deployed to the GitHub page as my repository the steps are below.
-* In GitHub navigate to the repository
-Click on setting ( last section on navbar)
+* This website was deployed to the GitHub page as my repository the steps are below.
+* In GitHub navigate to the repository Click on setting ( last section on navbar)
     * Find "Pages" on the drop-down menu 
     * left-hand side of the drop-down many find Build and Deployment
     * choose to deploy from a branch below choose the main branches and root folder 
-        * save
-The live link can be found here [link to game](https://cinula.github.io/rock-paper-scissors-lizard-spock-game/)
+    * save
+* The dev environment was VS code, in which the code was written. The steps to Deploy to Github: Open the GitHub page on my account, click Create a new repository, and type in the repository name. 
+    * Opened VS code dev environment, found the terminal on the top navbar, and clicked new terminal. 
+    * Take instruction from the GitHub and type in terminal 
+        * echo "# new" >> README.md
+        git init
+        git add README.md
+        git commit -m "first commit"
+        git branch -M main
+        git remote add origin https://github.com/Cinula/new.git
+        git push -u origin main 
 
 # Credits
 
@@ -139,8 +147,8 @@ The live link can be found here [link to game](https://cinula.github.io/rock-pap
     * The information for the game Rock, paper, scissors, lizard, Spock game was taken from Code Institute from idea example 1.
     * Code institute and love Math projects helped me a lot in understanding a lot of content. 
     * I gathered information for a better understanding of the game engine and how to create JavaScript on YouTube the links are below: 
-        [link for Youtube](https://www.youtube.com/watch?v=jaVNP3nIAv0&t=2160s)
-        [link for Youtube](https://www.youtube.com/watch?v=3uKdQx-SZ5A&t=560s)
+    [link for Youtube ](https://www.youtube.com/watch?v=jaVNP3nIAv0&t=2160s)YouTube [link for](https://www.youtube.com/watch?v=3uKdQx-SZ5A&t=560s) 
+    [link for Youtube](https://www.youtube.com/watch?v=3uKdQx-SZ5A&t=560s)
 * Media
     * The images were gathered from an open-source site.
 

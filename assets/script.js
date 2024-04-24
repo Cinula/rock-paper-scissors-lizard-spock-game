@@ -1,13 +1,14 @@
 let userScore = 0;
 let compScore = 0;
-let user_score_span = document.getElementById("user-score");
-let comp_score_span = document.getElementById("computer-score");
+let userScoreSpan = document.getElementById("user-score");
+let compScoreSpan = document.getElementById("computer-score");
 let resultP = document.querySelector(".result > p");
 let rockDiv = document.getElementById("r");
 let paperDiv = document.getElementById("p");
 let scissoresDiv = document.getElementById("c");
 let lizardDiv = document.getElementById("l");
 let spockDiv = document.getElementById("s");
+
 /**
  * The function is for computer to make random choise from array objects] 
  */
@@ -25,7 +26,6 @@ function getComputerChoice() {
  * "l" for Lizard
  * "s" for Spock 
  */
-
 function coverLetter(letter) {
     if (letter === "r") return "Rock";
     if (letter === "p") return "Paper";
@@ -33,6 +33,7 @@ function coverLetter(letter) {
     if (letter === "l") return "Lizard";
     if (letter === "s") return "Spock";
 }
+
 /**
  * Function for increas the score when user wins
  * showing messege of user choice pick beast computer random choice
@@ -40,20 +41,22 @@ function coverLetter(letter) {
 
 function win(userChoice, computerChoice) {
     userScore++;
-    user_score_span.innerHTML = userScore;
-    comp_score_span.innerHTML = compScore;
+    userScoreSpan.innerHTML = userScore;
+    compScoreSpan.innerHTML = compScore;
     resultP.innerHTML = `${coverLetter(userChoice)} beats ${coverLetter(computerChoice)} You WON!!!`;
 }
+
 /**
  * Function for increas the score when computer wins
  * showing messege of user choice looses to computer random choice
  */
 function lose(userChoice, computerChoice) {
     compScore++;
-    user_score_span.innerHTML = userScore;
-    comp_score_span.innerHTML = compScore;
+    userScoreSpan.innerHTML = userScore;
+    compScoreSpan.innerHTML = compScore;
     resultP.innerHTML = `${coverLetter(userChoice)} loses to ${coverLetter(computerChoice)} You LOST!`;;
 }
+
 /**
  * Function for increas the score when user win
  * showing messege of user choice and computer random choice are equals 
@@ -62,6 +65,7 @@ function lose(userChoice, computerChoice) {
 function draw(userChoice, computerChoice) {
     resultP.innerHTML = `${coverLetter(userChoice)} Equals ${coverLetter(computerChoice)} Its a draw!`;
 }
+
 /**
  * Function is main engine for game 
  * This is game rules for user or computer to win, lose or draw 
@@ -103,6 +107,7 @@ function game(userChoice) {
             break;
     }
 }
+
 /**
  * Function main is for to run game 
  */
@@ -124,6 +129,7 @@ function main() {
         game("s");
     })
 }
+
 document.addEventListener("DOMContentLoaded", (event) => {
     main()
 });
