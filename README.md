@@ -65,8 +65,10 @@ I use font Siza to be easily readable for the user.
     
 
 * Lighthouse test by Google inspects tool. 
-    <img>
-    <img>
+* Lighthouse test Computer:
+    ![Lighthouse test computer](<assets/images/lighthouse test coputer.png>)
+* Lighthouse test Mobile:
+    ![Lighthouse test mobile](<assets/images/lighthouse test mobile.png>)
  * The browser test is complete works correctly and displaying on Chrome and Microsoft Edge browsers.
  * Microsoft browser Test: 
  ![Microsoft Edge](<assets/images/microsoft edge.png>)
@@ -131,8 +133,7 @@ I use font Siza to be easily readable for the user.
     * choose to deploy from a branch below choose the main branches and root folder 
     * save
 * The dev environment was VS code, in which the code was written. The steps to Deploy to Github: Open the GitHub page on my account, click Create a new repository, and type in the repository name. 
-    * Opened VS code dev environment, found the terminal on the top navbar, and clicked new terminal. 
-    * Take instruction from the GitHub and type in terminal 
+    * Opened VS code dev environment, found the terminal on the top navbar, and clicked new terminal. Take instructions from GitHub and type in the terminal 
         * echo "# new" >> README.md
         git init
         git add README.md
@@ -145,8 +146,7 @@ I use font Siza to be easily readable for the user.
 
 * Content
     * The information for the game Rock, paper, scissors, lizard, Spock game was taken from Code Institute from idea example 1.
-    * Code institute and love Math projects helped me a lot in understanding a lot of content. 
-    * I gathered information for a better understanding of the game engine and how to create JavaScript on YouTube the links are below: 
+    * Code institute and love Math projects helped me a lot in understanding a lot of content. I gathered the information for a better understanding of the game engine and how to create JavaScript on YouTube the links are below: 
     [link for Youtube ](https://www.youtube.com/watch?v=jaVNP3nIAv0&t=2160s)YouTube [link for](https://www.youtube.com/watch?v=3uKdQx-SZ5A&t=560s) 
     [link for Youtube](https://www.youtube.com/watch?v=3uKdQx-SZ5A&t=560s)
 * Media
