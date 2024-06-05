@@ -9,6 +9,7 @@ let scissoresDiv = document.getElementById("c");
 let lizardDiv = document.getElementById("l");
 let spockDiv = document.getElementById("s");
 
+
 /**
  * The function is for computer to make random choise from array objects] 
  */

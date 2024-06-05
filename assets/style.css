@@ -100,6 +100,48 @@ div>p {
     font-weight: bold;
     margin-top: 20px;
 }
+.rulesbtn{
+    background: violet;
+    padding :1em 2em;
+    color: white;
+    border: 0;
+}
+.rulesbtn:hover{
+    background: darkviolet;
+}
+
+.rules{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.rulesContent{
+    background-color: black;
+    margin: 45% auto;
+    padding: 20px;
+    width: 20%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.39), 0 7px 20px 0 rgba(0, 0, 0, 0.397);
+}
+
+.closebtn{
+    color: violet;
+    float: right;
+    font-size: larger;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.closebtn:hover,.closebtn:focus{
+    color: darkviolet;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 @media only screen and (max-width: 500px) {
     header {
