@@ -100,21 +100,27 @@ div>p {
     font-weight: bold;
     margin-top: 20px;
 }
-.rulesbtn{
+.rulesBtn{
     background: violet;
     padding :1em 2em;
     color: white;
     border: 0;
 }
-.rulesbtn:hover{
+.rulesBtn:hover{
     background: darkviolet;
+}
+button{
+    position: fixed;
+    top: 57%;
+    left: 48%;
 }
 
 .rules{
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
-    top:0;
+    top: 0;
     height: 100%;
     width: 100%;
     overflow: auto;
@@ -123,24 +129,26 @@ div>p {
 
 .rulesContent{
     background-color: black;
-    margin: 45% auto;
+    margin: 30% auto;
     padding: 20px;
     width: 20%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.39), 0 7px 20px 0 rgba(0, 0, 0, 0.397);
 }
 
-.closebtn{
+.closeBtn{
     color: violet;
     float: right;
     font-size: larger;
     font-size: 30px;
     font-weight: bolder;
 }
-.closebtn:hover,.closebtn:focus{
+.closeBtn:hover,.closebtn:focus{
     color: darkviolet;
     text-decoration: none;
     cursor: pointer;
 }
+
+
 
 
 @media only screen and (max-width: 500px) {
@@ -162,5 +170,6 @@ div>p {
         height: 120px;
         width: 120px;
     }
+
 
 }

@@ -9,6 +9,34 @@ let scissoresDiv = document.getElementById("c");
 let lizardDiv = document.getElementById("l");
 let spockDiv = document.getElementById("s");
 
+// Get DOM Elements
+let modal = document.querySelector('#rulesModal');
+let modalBtn = document.querySelector('#rulesBtn');
+let closeBtn = document.querySelector('.closeBtn');
+
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
+
+
+// function for open rules 
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// function to close rules
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// function close rules If click outside
+function outsideClick(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+
+
 
 /**
  * The function is for computer to make random choise from array objects] 
