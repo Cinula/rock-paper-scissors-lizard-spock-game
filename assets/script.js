@@ -9,7 +9,7 @@ let scissoresDiv = document.getElementById("c");
 let lizardDiv = document.getElementById("l");
 let spockDiv = document.getElementById("s");
 
-// Get DOM Elements
+// Get rules Elements
 let modal = document.querySelector('#rulesModal');
 let modalBtn = document.querySelector('#rulesBtn');
 let closeBtn = document.querySelector('.closeBtn');
@@ -36,6 +36,19 @@ function outsideClick(e) {
   }
 }
 
+// Input for user to creat name
+
+let user = document.getElementById('user-label')
+
+let userinput
+
+userinput = prompt('To start game please enter your name: ?')
+
+do {
+    userinput = prompt('To start game please enter your name: ?')
+    user.innerText = userinput
+}
+while(!userinput)
 
 
 /**
