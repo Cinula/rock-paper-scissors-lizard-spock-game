@@ -67,9 +67,13 @@ div>p {
 }
 
 .result>p {
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 30px;
+    padding: 10px;
 }
 
 .choices {
@@ -92,14 +96,6 @@ div>p {
     background: violet;
 }
 
-#action-message {
-    text-align: center;
-    color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 40px;
-    font-weight: bold;
-    margin-top: 20px;
-}
 .rulesBtn,#easy,#medium,#hard{
     background: violet;
     padding :1em 2em;
@@ -168,6 +164,32 @@ div>p {
     justify-content: center;
 }
 
+#timer{
+    color: violet;
+    position: absolute;
+    left:40%;
+    top: 75px;
+    margin: 5px;
+    padding: 2px;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media only screen and (max-width: 900px) {
+    #timer{
+        position: absolute;
+        left: 28%;
+        top:75px;
+    }
+}
+@media only screen and (max-width: 644px){
+    #timer{
+        position: absolute;
+        left: 28%;
+        top:115px;
+        font-size: 30px;
+    }
+} 
 
 @media only screen and (max-width: 500px) {
     header {
@@ -191,6 +213,10 @@ div>p {
     .rulesContent{
     width: 50%;
     }
-
-
+    #timer{
+        position: absolute;
+        left: 34%;
+        top:45px;
+        font-size: 20px;
+    }
 }
