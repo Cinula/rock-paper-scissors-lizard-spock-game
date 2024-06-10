@@ -100,16 +100,25 @@ div>p {
     font-weight: bold;
     margin-top: 20px;
 }
-.rulesBtn{
+.rulesBtn,#easy,#medium,#hard{
     background: violet;
     padding :1em 2em;
     color: white;
     border: 0;
+    margin: 5px;
 }
 .rulesBtn:hover{
     background: darkviolet;
 }
-
+#easy:hover{
+    background: darkviolet;
+}
+#medium:hover{
+    background: darkviolet;
+}
+#hard:hover{
+    background: darkviolet;
+}
 
 .rules{
     display: none;
@@ -152,6 +161,11 @@ div>p {
     font-weight: bold;
     text-decoration: underline;
     margin-bottom: 10px;
+}
+
+#buttonPosition{
+    display: flex;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 500px) {
