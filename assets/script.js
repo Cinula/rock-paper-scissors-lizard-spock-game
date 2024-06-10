@@ -9,7 +9,76 @@ let scissoresDiv = document.getElementById("c");
 let lizardDiv = document.getElementById("l");
 let spockDiv = document.getElementById("s");
 
-// Get rules Elements
+
+
+
+
+// User name
+let user = document.getElementById('user-label');
+
+let userinput
+
+do{
+    userinput = prompt("Enter your name: ")
+    user.innerText = userinput
+}
+while(!userinput)
+
+
+let countdown;
+let currentDuration
+        
+    document.getElementById('easy').addEventListener('click', function() {
+        startTimer(4);
+    });
+
+    document.getElementById('medium').addEventListener('click', function() {
+        startTimer(2);
+    });
+
+    document.getElementById('hard').addEventListener('click', function() {
+        startTimer(1);
+    });
+
+    function startTimer(seconds) {
+        clearInterval(countdown);
+        currentDuration = seconds
+        document.querySelector(".result > p").textContent = '';
+        document.getElementById('timer').textContent = `Time remaining: ${seconds}s`;
+
+        const endTime = Date.now() + seconds * 1000;
+
+        countdown = setInterval(function() {
+            const secondsLeft = Math.round((endTime - Date.now()) / 1000);
+
+            if (secondsLeft <= 0) {
+                clearInterval(countdown);
+                compScore++;
+                userScoreSpan.innerHTML = userScore;
+                compScoreSpan.innerHTML = compScore;
+                document.querySelector(".result > p").textContent = 'Time is up! Computer wins the game.';
+                document.getElementById('timer').textContent = '';
+            } else {
+                document.getElementById('timer').textContent = `Time remaining: ${secondsLeft}s`;
+            }
+        }, 1000);
+    }
+
+rockDiv.addEventListener('click', resetTimer)
+paperDiv.addEventListener('click', resetTimer)
+scissoresDiv.addEventListener('click', resetTimer)
+lizardDiv.addEventListener('click', resetTimer)
+spockDiv.addEventListener('click', resetTimer)
+
+function resetTimer(){
+    if(currentDuration){
+        startTimer(currentDuration)
+    }
+}
+
+
+
+// Get DOM Elements
 let modal = document.querySelector('#rulesModal');
 let modalBtn = document.querySelector('#rulesBtn');
 let closeBtn = document.querySelector('.closeBtn');
@@ -36,19 +105,6 @@ function outsideClick(e) {
   }
 }
 
-// Input for user to creat name
-
-let user = document.getElementById('user-label')
-
-let userinput
-
-userinput = prompt('To start game please enter your name: ?')
-
-do {
-    userinput = prompt('To start game please enter your name: ?')
-    user.innerText = userinput
-}
-while(!userinput)
 
 
 /**
