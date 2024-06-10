@@ -1,19 +1,58 @@
-# Rock, paper, scissors, lizard, Spock game Project
+# Rock Paper Scissors Lizard Spock Game
 
 Hello and welcome, in this project you can see basic information about the rock, scissors, paper, lizard, and Spock game. 
 
-# User story 
+## Introduction
+This project is an implementation of the classic "Rock, Paper, Scissors" game, extended to include "Lizard" and "Spock" for additional complexity and fun. The game features a dynamic timer mechanism, multiple difficulty levels, and a modal with instructions on how to play.
 
-* As a visiting user, I would like to:
-    * Play the rock, scissors, paper, lizard, Spock game.
-    * See the title on the website and game.
-    * Have a choice of pick rock, scissors, paper, lizard, Spock game.
-    * Check all the buttons.
-    * See the score against the computer.
-    * See the score increasing when I win.
-    * See the score increasing for the computer if I lose.
-    * See and navigate through the game.
-    ![main website](<assets/images/rock, paper, scisors,lizard, spock.png>)
+## How to Play
+1. **Choose Difficulty**:
+    - Enter your name in the prompt widow
+        - Please player needs to type in his name to start the game.
+![player-name](<assets/images/Enter Name.webp>)
+
+    - Select a difficulty level by clicking on one of the buttons labeled "Easy", "Medium", or "Hard".
+    - Each difficulty level has a different timer duration:
+      - Easy: 4 seconds
+      - Medium: 3 seconds
+      - Hard: 2 second
+![easy](assets/images/easy.webp)
+![medium](assets/images/medium.webp)
+![hard](assets/images/hard.webp)
+
+2. **Play the Game**:
+   - Before the timer runs out, choose one of the five options: Rock, Paper, Scissors, Lizard, or Spock by clicking the respective button.
+![choice](assets/images/Choice.webp)
+   - If you fail to choose before the timer expires, the computer automatically wins the round.
+![TimesUp](assets/images/TimesUp.webp)
+
+3. **View Results**:
+   - The result of the round is displayed on the screen, indicating whether you won, lost, or drew.
+   - Scores are updated accordingly for both the user and the computer.
+![score](assets/images/score.webp)   
+
+## Game Rules
+The extended rules for "Rock, Paper, Scissors, Lizard, Spock" are as follows:
+- **Rock** crushes **Scissors**
+- **Rock** crushes **Lizard**
+- **Paper** covers **Rock**
+- **Paper** disproves **Spock**
+- **Scissors** cut **Paper**
+- **Scissors** decapitate **Lizard**
+- **Lizard** eats **Paper**
+- **Lizard** poisons **Spock**
+- **Spock** smashes **Scissors**
+- **Spock** vaporizes **Rock**
+![rules](assets/images/rules.webp)
+
+## Features
+- **Dynamic Timer**: The timer resets each time you click on one of the game options (Rock, Paper, Scissors, Lizard, or Spock).
+- **Score Tracking**: The game keeps track of both the user's and the computer's scores, displaying them in real-time.
+- **Responsive Messages**: The game displays messages indicating the result of each round.
+- **Rules Modal**: A modal window that displays the rules of the game can be opened and closed for reference.
+
+![message](<assets/images/interactive message.webp>)
+
 
 # Features of the game The game have a 5 navigating options to choose from:
 * Option one is an image of the fist as a rock in the game.
@@ -24,21 +63,74 @@ Hello and welcome, in this project you can see basic information about the rock,
 * Each option has a white background, when the user points their cursor at it color changes to violet.
 * Each option is clickable, and after clicking the game approves the selection. 
 * Each time the user selects one of the options there is a score increase. 
-* Each time the user wins or loses the information is displayed in violet color under the scoreboard when the user wins or loses.
-![option to chose](<assets/images/rock, paper, scisors,lizard, spock.png>)
+* Each time the user wins or loses the information is displayed in violet color under the options for the player's choice.
 
 # Future features 
 * The game could store the date time and score for a user to keep records of winning and what day the user spent most time playing the game.
 
-# Typography and color scheme 
+# Code Explanation
 
+## Variables
+- 'userScore' and 'compScore': Variables to track the scores of the user and the computer.
+- 'userScoreSpan' and 'compScoreSpan': Elements to display the user's and computer's scores respectively.
+- 'resultP': Element to display the result message of each round.
+- Game option elements ('rockDiv', 'paperDiv', 'scissoresDiv', 'lizardDiv', 'spockDiv'): Elements corresponding to each game option used to attach event listeners.
+
+## Timer Functions
+- 'startTimer(seconds)':
+  - Starts a countdown timer with the specified duration in seconds.
+  - Clears any existing timer interval to prevent multiple timers from running simultaneously.
+  - Updates the timer display every second.
+  - Shows a message and updates the computer's score if the timer runs out.
+ 
+- 'resetTimer()':
+  - Resets the timer to the current duration when a game option is clicked.
+  - Ensures the timer restarts with the same duration that was initially set.
+
+## Game Functions
+- 'getComputerChoice()':
+  - Randomly selects one of the game options for the computer from an array of choices.
+ 
+- 'coverLetter(letter)':
+  - Converts the shorthand letter representing a game option to its full name for display purposes.
+ 
+- 'win(userChoice, computerChoice)':
+  - Increments the user's score and updates the score display.
+  - Displays a win message indicating the user's choice and the computer's choice.
+ 
+- 'lose(userChoice, computerChoice)':
+  - Increments the computer's score and updates the score display.
+  - Displays a lose message indicating the user's choice and the computer's choice.
+ 
+- 'draw(userChoice, computerChoice)':
+  - Displays a draw message indicating that both choices are the same.
+ 
+- 'game(userChoice)':
+  - The main game logic determines the result of each round based on the user's and computer's choices.
+  - Uses a switch statement to apply the game rules and calls the appropriate function ('win', 'lose', or 'draw') based on the result.
+
+## Modal Functions
+- 'openModal()', 'closeModal()', 'outsideClick(e)':
+- Functions to handle the opening, closing, and outside click detection for the modal displaying the game rules.
+
+## Initialization
+- 'main()':
+- Sets up event listeners for the game option elements to start the game when clicked.
+ 
+- 'document.addEventListener("DOMContentLoaded", (event) => { main(); });':
+- Ensures the game initializes and sets up event listeners after the DOM is fully loaded.
+
+# Getting Started
+To run the game, simply open the 'index.html' file in a web browser. The game interface will appear, you will have to enter your name. Then you get access and allows you to enter the game. Select a difficulty level and start playing immediately. You can further customize the game by modifying the JavaScript and CSS files.
+
+
+# Typography and color scheme 
 I use the colors white, black and violet. I believe is good contrast and readable for users.
 I use font built-in VCS - "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" 
 I use font Siza to be easily readable for the user. 
 
 
 # Technology 
-
 * Main technology 
 * Tower PC with Windows 10 Pro
     * Visual studio code
@@ -51,68 +143,63 @@ I use font Siza to be easily readable for the user.
 * GitHub and Git 
     * Display repository 
 * Committing code to the repository 
-* HTML code Validator [link to HTML validator](https://validator.w3.org/)
-* CSS code Validator [link to CSS validator]
+* HTML code Validator
+* CSS code Validator 
 * Grammarly for grammar and spelling mistakes.
 
 
 
 # Testing 
-
 * Tested in HTML code validator [link to HTML validator](https://validator.w3.org/)
+![HTML](<assets/images/HTML validator.webp>)
     
 * Tested CSS code validator [link to CSS validator](https://jigsaw.w3.org/css-validator/)
+![css](<assets/images/css validator.webp>)
     
 
 * Lighthouse test by Google inspects tool. 
 * Lighthouse test Computer:
-    ![Lighthouse test computer](<assets/images/lighthouse test coputer.png>)
+![pcTest](assets/images/lighthouse-tower.webp)
 * Lighthouse test Mobile:
-    ![Lighthouse test mobile](<assets/images/lighthouse test mobile.png>)
+![mobileTest](assets/images/lighthouse-mobile.webp)
  * The browser test is complete works correctly and displaying on Chrome and Microsoft Edge browsers.
  * Microsoft browser Test: 
- ![Microsoft Edge](<assets/images/microsoft edge.png>)
+![edge](assets/images/edgeTest.webp)
  * Google Chrome browser Test:
- ![Google Chrome](<assets/images/Google Chrome.png>)
+![chrome](assets/images/chromeTest.webp)
 
 * Test for user choices in-game:
     * There are 5 options to choose after the user's choice he should find out if he won, lost or drew with an opponent.
     * The test will also show the ability of random choice of the computer.
-    * The first test is to check random choice for the computer
-
+    * The first test is to check random choice for the computer's
+![random](assets/images/randomC.webp)
     * Test for "Rock" choice for user 
-        ![Test Rock](<Test Rock-1.png>)
+![rTest](assets/images/rTest.webp)     
     * Rock is picked for the user when you point it cursor at it the background color changes to violet.
     * After the user clicks it automatically computer makes a random choice. 
     * Test for "Scissors" choice for user
-        ![Test Scissors](<assets/images/Test Scissors.png>)
+![cTest](assets/images/cTest.webp)
     * Scissors are picked for the user when you point it cursor at them the background color changes to violet.
     * After the user clicks it automatically computer makes a random choice. 
     * Test for "Paper" choice for user
-        ![Test Paper](<assets/images/Test Paper.png>)
+![pTest](assets/images/pTest.webp)    
     * When Paper is picked for the user when you point the cursor at it the background color changes to violet.
     * After the user clicks the computer makes his random choice. 
     * Test for "Lizard" choice for user
     * Lizard is picked for the user when you point it cursor at it the background color changes to violet.
-        ![Test Lizard](<assets/images/Test Lizard.png>)
+![lTest](assets/images/ltest.webp)        
     * After the user clicks it automatically computer makes a random choice.
     * Test for "Spock" choice for user
-        ![Test Spock](<assets/images/Test Spock.png>)
+![sTest](assets/images/sTest.webp)        
     * Spock is picked for the user when you point it cursor at it the background color changes to violet.
     * After the user clicks it automatically computer makes a random choice.
     * Test for scoreboard for user:
     * The score goes up by one every time the user wins
-        ![Score up](<assets/images/Score up for user.png>)
     * The score for the computer goes up by one every time wins. 
-        ![Rock loses](<assets/images/Rock loses.png>)
-    * text changes to beats, lose and equal. 
-        ![Rock wins](<assets/images/Score up for user.png>)
-        ![Rock loses](<assets/images/Rock loses.png>)
-        ![Rock equal](<assets/images/Rock equal.png>)
+![score](assets/images/score.webp)        
 
 
 # Bugs and errors 
-
  * typing mistakes 
  * semi-colon missing  
  * colon missing 
@@ -142,8 +229,14 @@ I use font Siza to be easily readable for the user.
         git remote add origin https://github.com/Cinula/new.git
         git push -u origin main 
 
-# Credits
+# Conclusion
+This project provides an interactive and enjoyable way to play the extended "Rock, Paper, Scissors, Lizard, Spock" game. It includes dynamic timers, real-time score tracking, and an intuitive user interface. Feel free to explore the code, understand the logic, and enhance the game with additional features or improvements.
 
+# Acknowledgments
+- The extended game rules are derived from the TV show "The Big Bang Theory".
+- The project was developed to demonstrate the integration of JavaScript functionalities for a web-based game.
+
+# Credits
 * Content
     * The information for the game Rock, paper, scissors, lizard, Spock game was taken from Code Institute from idea example 1.
     * Code institute and love Math projects helped me a lot in understanding a lot of content. I gathered the information for a better understanding of the game engine and how to create JavaScript on YouTube the links are below: 
@@ -151,7 +244,3 @@ I use font Siza to be easily readable for the user.
     [link for Youtube](https://www.youtube.com/watch?v=3uKdQx-SZ5A&t=560s)
 * Media
     * The images were gathered from an open-source site.
-
-* Acknowledgment
-    * Special thanks to my mentor, "Rohit Sharma" for helping me with my second project. 
-        

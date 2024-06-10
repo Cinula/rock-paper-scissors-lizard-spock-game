@@ -16,33 +16,33 @@ let spockDiv = document.getElementById("s");
 // User name
 let user = document.getElementById('user-label');
 
-let userinput
+let userinput;
 
 do{
-    userinput = prompt("Enter your name: ")
-    user.innerText = userinput
+    userinput = prompt("Enter your name: ");
+    user.innerText = userinput;
 }
-while(!userinput)
+while(!userinput);
 
 
 let countdown;
-let currentDuration
+let currentDuration;
         
     document.getElementById('easy').addEventListener('click', function() {
         startTimer(4);
     });
 
     document.getElementById('medium').addEventListener('click', function() {
-        startTimer(2);
+        startTimer(3);
     });
 
     document.getElementById('hard').addEventListener('click', function() {
-        startTimer(1);
+        startTimer(2);
     });
 
     function startTimer(seconds) {
         clearInterval(countdown);
-        currentDuration = seconds
+        currentDuration = seconds;
         document.querySelector(".result > p").textContent = '';
         document.getElementById('timer').textContent = `Time remaining: ${seconds}s`;
 
@@ -64,15 +64,15 @@ let currentDuration
         }, 1000);
     }
 
-rockDiv.addEventListener('click', resetTimer)
-paperDiv.addEventListener('click', resetTimer)
-scissoresDiv.addEventListener('click', resetTimer)
-lizardDiv.addEventListener('click', resetTimer)
-spockDiv.addEventListener('click', resetTimer)
+rockDiv.addEventListener('click', resetTimer);
+paperDiv.addEventListener('click', resetTimer);
+scissoresDiv.addEventListener('click', resetTimer);
+lizardDiv.addEventListener('click', resetTimer);
+spockDiv.addEventListener('click', resetTimer);
 
 function resetTimer(){
     if(currentDuration){
-        startTimer(currentDuration)
+        startTimer(currentDuration);
     }
 }
 
@@ -152,7 +152,7 @@ function lose(userChoice, computerChoice) {
     compScore++;
     userScoreSpan.innerHTML = userScore;
     compScoreSpan.innerHTML = compScore;
-    resultP.innerHTML = `${coverLetter(userChoice)} loses to ${coverLetter(computerChoice)} You LOST!`;;
+    resultP.innerHTML = `${coverLetter(userChoice)} loses to ${coverLetter(computerChoice)} You LOST!`;
 }
 
 /**
@@ -213,21 +213,21 @@ function main() {
 
     rockDiv.addEventListener('click', function () {
         game("r");
-    })
+    });
     paperDiv.addEventListener('click', function () {
         game("p");
-    })
+    });
     scissoresDiv.addEventListener('click', function () {
         game("c");
-    })
+    });
     lizardDiv.addEventListener('click', function () {
         game("l");
-    })
+    });
     spockDiv.addEventListener('click', function () {
         game("s");
-    })
+    });
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    main()
+    main();
 });
