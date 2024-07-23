@@ -13,16 +13,20 @@ let spockDiv = document.getElementById("s");
 
 
 
-// User name
-let user = document.getElementById('user-label');
+// Get user name
+function getUserName(){
+    let userName;
+    do {
+        userName = prompt("Enter your name (at least 3 characters):");
+        if (userName === null){
+            alert("You canceled the input. Please try again.");
+        } else if (userName.trim().length < 3){
+            alert("Invalid name. Please enter a name with at least 3 characters.");
+        }
+    } while (!userName || userName.trim().length < 3);
 
-let userinput;
-
-do{
-    userinput = prompt("Enter your name: ");
-    user.innerText = userinput;
+    document.getElementById('user-label').innerText = userName.trim();
 }
-while(!userinput);
 
 
 let countdown;
